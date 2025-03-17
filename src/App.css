@@ -1,0 +1,41 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Rubik, Arial, Helvetica, sans-serif;
+}
+
+/* HEADER STYLING BELOW */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-image {
+  width: 20rem;
+  height: auto;
+}
+
+.header-menu {
+  display: flex;
+  gap: 16rem;
+}
+
+.header-menu-item {
+  width: 12rem;
+  text-align: center;
+  letter-spacing: 0.4rem;
+}
+
+.header-menu-item:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+.horizontal-line {
+  background-color: white;
+  height: 0.1rem;
+  width: 100vw;
+}
