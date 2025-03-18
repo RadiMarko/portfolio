@@ -1,13 +1,20 @@
 import myLogoDark from "/rm_logo_dark.svg";
 import myLogoBright from "/rm_logo_bright.svg";
+import hunFlag from "/hungarian.svg";
+import engFlag from "/english.svg";
 import sunIcon from "/bright_mode_on.svg";
 import moonIcon from "/dark_mode_on.svg";
-import { useState } from "react";
 
 export default function Header(props) {
   return (
     <section className="header-dark">
       <div className="logo-row">
+        <img
+          className="flag"
+          src={props.language === "english" ? hunFlag : engFlag}
+          alt="A Hungarian or English flag icon for switching languages."
+          onClick={props.toggleLanguage}
+        ></img>
         <img
           className="header-image"
           src={props.darkMode ? myLogoDark : myLogoBright}
@@ -21,9 +28,15 @@ export default function Header(props) {
         ></img>
       </div>
       <div className="header-menu">
-        <h2 className="header-menu-item">Technologies</h2>
-        <h2 className="header-menu-item">Projects</h2>
-        <h2 className="header-menu-item">Contact</h2>
+        <h2 className="header-menu-item">
+          {props.language === "english" ? "Technologies" : "Technológiák"}
+        </h2>
+        <h2 className="header-menu-item">
+          {props.language === "english" ? "Projects" : "Projektek"}
+        </h2>
+        <h2 className="header-menu-item">
+          {props.language === "english" ? "Contacts" : "Elérhetőségek"}
+        </h2>
       </div>
       <div
         className={

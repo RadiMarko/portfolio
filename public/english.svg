@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 150">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #000;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #c8102e;
+      }
+
+      .cls-3 {
+        fill: #012169;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+
+      .cls-6 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-7 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-4" width="300" height="150"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <polygon class="cls-4" points="150 75 300 75 300 150 150 150 0 150 0 75 0 0 150 0 300 0 150 75"/>
+    </clipPath>
+  </defs>
+  <g class="cls-7">
+    <g>
+      <path class="cls-3" d="M0,0v150h300V0H0Z"/>
+      <g>
+        <path class="cls-1" d="M0,0l300,150M300,0L0,150"/>
+        <polygon class="cls-5" points="293.29 163.42 150 91.77 6.71 163.42 -6.71 136.58 116.46 75 -6.71 13.42 6.71 -13.42 150 58.23 293.29 -13.42 306.71 13.42 183.54 75 306.71 136.58 293.29 163.42"/>
+      </g>
+      <g class="cls-6">
+        <g>
+          <path class="cls-1" d="M0,0l300,150M300,0L0,150"/>
+          <polygon class="cls-2" points="295.53 158.94 150 86.18 4.47 158.94 -4.47 141.06 127.64 75 -4.47 8.94 4.47 -8.94 150 63.82 295.53 -8.94 304.47 8.94 172.36 75 304.47 141.06 295.53 158.94"/>
+        </g>
+      </g>
+      <g>
+        <path class="cls-1" d="M150,0v150M0,75h300"/>
+        <polygon class="cls-5" points="175 150 125 150 125 100 0 100 0 50 125 50 125 0 175 0 175 50 300 50 300 100 175 100 175 150"/>
+      </g>
+      <g>
+        <path class="cls-1" d="M150,0v150M0,75h300"/>
+        <polygon class="cls-2" points="165 150 135 150 135 90 0 90 0 60 135 60 135 0 165 0 165 60 300 60 300 90 165 90 165 150"/>
+      </g>
+    </g>
+  </g>
+</svg>
