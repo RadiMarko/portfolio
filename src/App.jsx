@@ -1,14 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
-
 import Header from "./Components/Header";
+import Hero from "./Components/Hero";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [darkMode, setDarkMode] = useState(true);
+
+  useEffect(() => {
+    document.body.className = darkMode ? "dark-mode" : "bright-mode";
+  }, [darkMode]);
+
+  function toggleLightMode() {
+    setDarkMode((prevDarkMode) => {
+      return !prevDarkMode;
+    });
+  }
 
   return (
     <>
-      <Header></Header>
+      <Header darkMode={darkMode} toggleLightMode={toggleLightMode}></Header>
+      <Hero></Hero>
     </>
   );
 }
