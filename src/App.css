@@ -71,7 +71,7 @@ body {
 }
 
 .header-menu-item {
-  width: 12rem;
+  width: 18rem;
   text-align: center;
   letter-spacing: 0.4rem;
   margin-top: 3rem;
@@ -115,7 +115,13 @@ p {
 }
 
 .name-text {
+  cursor: pointer;
   font-size: 2rem;
+  transition: 0.4s;
+}
+
+.name-text:hover {
+  letter-spacing: 0.8rem;
 }
 
 .my-picture {
