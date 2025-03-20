@@ -3,9 +3,9 @@ export default function TechLine(props) {
     <div className="tech-line">
       <p>{props.techName}</p>
       <img
-        className="wifi-image"
+        className="wifi-icon"
         src={props.image}
-        alt="Wifi symbol to symbolize proficiency."
+        alt="Wifi icon to symbolize proficiency."
       ></img>
     </div>
   );

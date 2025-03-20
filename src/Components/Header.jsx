@@ -1,13 +1,17 @@
+import TechLine from "./TechLine";
+import ContactLine from "./ContactLine";
 import myLogoDark from "/rm_logo_dark.svg";
 import myLogoBright from "/rm_logo_bright.svg";
 import hunFlag from "/hungarian.svg";
 import engFlag from "/english.svg";
 import sunIcon from "/bright_mode_on.svg";
 import moonIcon from "/dark_mode_on.svg";
-import TechLine from "./TechLine";
 import wifiLow from "/wifi_low.svg";
 import wifiMedium from "/wifi_medium.svg";
 import wifiHigh from "/wifi_high.svg";
+import email from "/email.svg";
+import phone from "/phone.svg";
+import github from "/github.svg";
 
 export default function Header(props) {
   return (
@@ -36,7 +40,13 @@ export default function Header(props) {
           <h2 className="header-menu-item">
             {props.language === "english" ? "Technologies" : "Technológiák"}
           </h2>
-          <div className="dropdown-content-dark">
+          <div
+            className={
+              props.darkMode
+                ? "dropdown-content-dark"
+                : "dropdown-content-bright"
+            }
+          >
             <div className="dropdown-list-tech">
               <TechLine techName="ILLUSTRATOR" image={wifiHigh}></TechLine>
               <TechLine techName="PHOTOSHOP" image={wifiLow}></TechLine>
@@ -66,12 +76,26 @@ export default function Header(props) {
           <h2 className="header-menu-item">
             {props.language === "english" ? "Contacts" : "Elérhetőségek"}
           </h2>
-          <div className="dropdown-content-dark">
+          <div
+            className={
+              props.darkMode
+                ? "dropdown-content-dark"
+                : "dropdown-content-bright"
+            }
+          >
             <div className="dropdown-list">
-              <a>C1</a>
-              <a>C2</a>
-              <a>C3</a>
-              <a>C4</a>
+              <ContactLine
+                image={email}
+                contactName="r.marko1995@gmail.com"
+              ></ContactLine>
+              <ContactLine
+                image={phone}
+                contactName="+36 30 674 1072"
+              ></ContactLine>
+              <ContactLine
+                image={github}
+                contactName="github.com/RadiMarko"
+              ></ContactLine>
             </div>
           </div>
         </div>

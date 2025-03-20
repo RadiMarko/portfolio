@@ -13,8 +13,8 @@ export default function Hero(props) {
       <p className="intro-text">
         {props.language === "english"
           ? `I'm a web developer and creator of vector graphics based in Hungary.
-        Let's collaborate to bring your digital products to life!`
-          : `Egy webfejlesztő és vektor grafikák készítője vagyok Magyarországról. Hozzuk létre a digitális termékeidet együtt!`}
+        Let's collaborate to bring your digital ideas to life!`
+          : `Egy webfejlesztő és vektor grafikák készítője vagyok Magyarországról. Valósítsuk meg digitális ötleteidet együtt!`}
       </p>
     </section>
   );
