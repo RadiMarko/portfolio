@@ -36,7 +36,7 @@ export default function Header(props) {
           <h2 className="header-menu-item">
             {props.language === "english" ? "Technologies" : "Technológiák"}
           </h2>
-          <div className="dropdown-content">
+          <div className="dropdown-content-dark">
             <div className="dropdown-list-tech">
               <TechLine techName="ILLUSTRATOR" image={wifiHigh}></TechLine>
               <TechLine techName="PHOTOSHOP" image={wifiLow}></TechLine>
@@ -53,7 +53,7 @@ export default function Header(props) {
           <h2 className="header-menu-item">
             {props.language === "english" ? "Projects" : "Projektek"}
           </h2>
-          <div className="dropdown-content">
+          <div className="dropdown-content-dark">
             <div className="dropdown-list">
               <p>P1</p>
               <p>P2</p>
@@ -66,7 +66,7 @@ export default function Header(props) {
           <h2 className="header-menu-item">
             {props.language === "english" ? "Contacts" : "Elérhetőségek"}
           </h2>
-          <div className="dropdown-content">
+          <div className="dropdown-content-dark">
             <div className="dropdown-list">
               <a>C1</a>
               <a>C2</a>
