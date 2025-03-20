@@ -4,11 +4,17 @@ export default function Hero(props) {
       <p className="greeting-text">
         {props.language === "english" ? "HELLO! MY NAME IS" : "HELLO! A NEVEM"}
       </p>
-      <p className="name-text">
-        {props.language === "english"
-          ? "MÁRKÓ RADISAVLJEVIC"
-          : "RADISAVLJEVIC MÁRKÓ"}
-      </p>
+      <a
+        href="https://www.linkedin.com/in/marko-radisavljevic-553a18357"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <p className="name-text">
+          {props.language === "english"
+            ? "MÁRKÓ RADISAVLJEVIC"
+            : "RADISAVLJEVIC MÁRKÓ"}
+        </p>
+      </a>
       <div className="my-picture"></div>
       <p className="intro-text">
         {props.language === "english"

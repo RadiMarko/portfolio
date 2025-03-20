@@ -12,6 +12,7 @@ import wifiHigh from "/wifi_high.svg";
 import email from "/email.svg";
 import phone from "/phone.svg";
 import github from "/github.svg";
+import linkedin from "/linkedin.svg";
 
 export default function Header(props) {
   return (
@@ -60,17 +61,9 @@ export default function Header(props) {
           </div>
         </div>
         <div className="dropdown">
-          <h2 className="header-menu-item">
+          <h2 className="header-menu-item project-text">
             {props.language === "english" ? "Projects" : "Projektek"}
           </h2>
-          <div className="dropdown-content-dark">
-            <div className="dropdown-list">
-              <p>P1</p>
-              <p>P2</p>
-              <p>P3</p>
-              <p>P4</p>
-            </div>
-          </div>
         </div>
         <div className="dropdown">
           <h2 className="header-menu-item">
@@ -95,6 +88,10 @@ export default function Header(props) {
               <ContactLine
                 image={github}
                 contactName="github.com/RadiMarko"
+              ></ContactLine>
+              <ContactLine
+                image={linkedin}
+                contactName="Marko Radisavljevic"
               ></ContactLine>
             </div>
           </div>
