@@ -4,6 +4,10 @@ import hunFlag from "/hungarian.svg";
 import engFlag from "/english.svg";
 import sunIcon from "/bright_mode_on.svg";
 import moonIcon from "/dark_mode_on.svg";
+import TechLine from "./TechLine";
+import wifiLow from "/wifi_low.svg";
+import wifiMedium from "/wifi_medium.svg";
+import wifiHigh from "/wifi_high.svg";
 
 export default function Header(props) {
   return (
@@ -28,15 +32,49 @@ export default function Header(props) {
         ></img>
       </div>
       <div className="header-menu">
-        <h2 className="header-menu-item">
-          {props.language === "english" ? "Technologies" : "Technológiák"}
-        </h2>
-        <h2 className="header-menu-item">
-          {props.language === "english" ? "Projects" : "Projektek"}
-        </h2>
-        <h2 className="header-menu-item">
-          {props.language === "english" ? "Contacts" : "Elérhetőségek"}
-        </h2>
+        <div className="dropdown">
+          <h2 className="header-menu-item">
+            {props.language === "english" ? "Technologies" : "Technológiák"}
+          </h2>
+          <div className="dropdown-content">
+            <div className="dropdown-list-tech">
+              <TechLine techName="ILLUSTRATOR" image={wifiHigh}></TechLine>
+              <TechLine techName="PHOTOSHOP" image={wifiLow}></TechLine>
+              <TechLine techName="INDESIGN" image={wifiMedium}></TechLine>
+              <TechLine techName="HTML5" image={wifiHigh}></TechLine>
+              <TechLine techName="CSS" image={wifiMedium}></TechLine>
+              <TechLine techName="JAVASCRIPT" image={wifiMedium}></TechLine>
+              <TechLine techName="REACT" image={wifiMedium}></TechLine>
+              <TechLine techName="PYTHON" image={wifiLow}></TechLine>
+            </div>
+          </div>
+        </div>
+        <div className="dropdown">
+          <h2 className="header-menu-item">
+            {props.language === "english" ? "Projects" : "Projektek"}
+          </h2>
+          <div className="dropdown-content">
+            <div className="dropdown-list">
+              <p>P1</p>
+              <p>P2</p>
+              <p>P3</p>
+              <p>P4</p>
+            </div>
+          </div>
+        </div>
+        <div className="dropdown">
+          <h2 className="header-menu-item">
+            {props.language === "english" ? "Contacts" : "Elérhetőségek"}
+          </h2>
+          <div className="dropdown-content">
+            <div className="dropdown-list">
+              <a>C1</a>
+              <a>C2</a>
+              <a>C3</a>
+              <a>C4</a>
+            </div>
+          </div>
+        </div>
       </div>
       <div
         className={
