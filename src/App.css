@@ -1,7 +1,7 @@
 body {
   transition: background-color 0.4s ease-in-out;
   font-family: Rubik, Arial, Helvetica, sans-serif;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 
 .dark-mode {
@@ -284,6 +284,7 @@ a:active {
   cursor: pointer;
   width: 18rem;
   margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 
 .button-dark:active {
@@ -342,4 +343,5 @@ a:active {
 .illustration {
   width: 20rem;
   height: auto;
+  border: 0.1rem solid black;
 }

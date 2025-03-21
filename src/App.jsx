@@ -9,6 +9,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [language, setLanguage] = useState("english");
   const [projectsShown, setProjectsShown] = useState(false);
+  const [illustrationsShown, setIllustrationsShown] = useState(false);
 
   useEffect(() => {
     document.body.className = darkMode ? "dark-mode" : "bright-mode";
@@ -30,6 +31,23 @@ function App() {
     }
   }, [projectsShown]);
 
+  useEffect(() => {
+    if (illustrationsShown) {
+      const illustrationSection = document.getElementsByClassName(
+        "illustration-section"
+      )[0];
+      if (illustrationSection) {
+        illustrationSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [illustrationsShown]);
+
+  useEffect(() => {
+    if (!illustrationsShown) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [illustrationsShown]);
+
   function toggleLanguage() {
     setLanguage((prevLanguage) => {
       return prevLanguage === "english" ? "hungarian" : "english";
@@ -48,6 +66,12 @@ function App() {
     });
   }
 
+  function toggleIllustrationsShown() {
+    setIllustrationsShown((prevIllustrationsShown) => {
+      return !prevIllustrationsShown;
+    });
+  }
+
   return (
     <>
       <Header
@@ -56,6 +80,7 @@ function App() {
         darkMode={darkMode}
         toggleLightMode={toggleLightMode}
         toggleProjectsShown={toggleProjectsShown}
+        toggleIllustrationsShown={toggleIllustrationsShown}
       ></Header>
       <Hero language={language}></Hero>
       <ProjectsDisplay
@@ -65,6 +90,8 @@ function App() {
         language={language}
       ></ProjectsDisplay>
       <IllustrationsDisplay
+        illustrationsShown={illustrationsShown}
+        toggleIllustrationsShown={toggleIllustrationsShown}
         darkMode={darkMode}
         language={language}
       ></IllustrationsDisplay>

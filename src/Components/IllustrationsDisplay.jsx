@@ -9,7 +9,11 @@ export default function IllustrationsDisplay(props) {
     <section className="illustration-section">
       <div className="illustrations">
         <div className="illustration-card">
-          <h2>WEDDING INVITATION</h2>
+          <h2>
+            {props.language === "english"
+              ? "WEDDING INVITATION"
+              : "ESKÜVŐI MEGHÍVÓ"}
+          </h2>
           <img
             className="illustration"
             src={invitationOne}
@@ -17,7 +21,11 @@ export default function IllustrationsDisplay(props) {
           ></img>
         </div>
         <div className="illustration-card">
-          <h2>WEDDING INVITATION</h2>
+          <h2>
+            {props.language === "english"
+              ? "WEDDING INVITATION"
+              : "ESKÜVŐI MEGHÍVÓ"}
+          </h2>
           <img
             className="illustration"
             src={invitationTwo}
@@ -25,7 +33,9 @@ export default function IllustrationsDisplay(props) {
           ></img>
         </div>
         <div className="illustration-card">
-          <h2>BUSINESS LOGO</h2>
+          <h2>
+            {props.language === "english" ? "BUSINESS LOGO" : "ÜZLET LOGÓJA"}
+          </h2>
           <img
             className="illustration"
             src={gamecenter}
