@@ -13,6 +13,22 @@ function App() {
     document.body.className = darkMode ? "dark-mode" : "bright-mode";
   }, [darkMode]);
 
+  useEffect(() => {
+    if (projectsShown) {
+      const projectSection =
+        document.getElementsByClassName("project-section")[0];
+      if (projectSection) {
+        projectSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [projectsShown]);
+
+  useEffect(() => {
+    if (!projectsShown) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [projectsShown]);
+
   function toggleLanguage() {
     setLanguage((prevLanguage) => {
       return prevLanguage === "english" ? "hungarian" : "english";
@@ -41,7 +57,10 @@ function App() {
         toggleProjectsShown={toggleProjectsShown}
       ></Header>
       <Hero language={language}></Hero>
-      <ProjectsDisplay projectsShown={projectsShown}></ProjectsDisplay>
+      <ProjectsDisplay
+        projectsShown={projectsShown}
+        toggleProjectsShown={toggleProjectsShown}
+      ></ProjectsDisplay>
     </>
   );
 }
