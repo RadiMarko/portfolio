@@ -1,7 +1,7 @@
 export default function TechLine(props) {
   return (
     <div className="tech-line">
-      <p>{props.techName}</p>
+      <p className="tech-text">{props.techName}</p>
       <img
         className="wifi-icon"
         src={props.image}
