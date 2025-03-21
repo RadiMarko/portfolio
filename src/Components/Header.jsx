@@ -61,7 +61,10 @@ export default function Header(props) {
           </div>
         </div>
         <div className="dropdown">
-          <h2 className="header-menu-item project-text">
+          <h2
+            className="header-menu-item project-text"
+            onClick={() => props.toggleProjectsShown()}
+          >
             {props.language === "english" ? "Projects" : "Projektek"}
           </h2>
         </div>

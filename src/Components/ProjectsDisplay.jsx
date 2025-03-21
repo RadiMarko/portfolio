@@ -1,6 +1,10 @@
-export default function ProjectsDisplay() {
+export default function ProjectsDisplay(props) {
   return (
-    <section class="project-section">
+    <section
+      className={
+        props.projectsShown ? "project-section-shown" : "project-section-hidden"
+      }
+    >
       <p>Test 1</p>
       <p>Test 2</p>
       <p>Test 3</p>
