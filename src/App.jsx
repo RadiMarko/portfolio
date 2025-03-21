@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./Components/Header";
 import Hero from "./Components/Hero";
 import ProjectsDisplay from "./Components/ProjectsDisplay";
+import IllustrationsDisplay from "./Components/IllustrationsDisplay";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -63,6 +64,10 @@ function App() {
         darkMode={darkMode}
         language={language}
       ></ProjectsDisplay>
+      <IllustrationsDisplay
+        darkMode={darkMode}
+        language={language}
+      ></IllustrationsDisplay>
     </>
   );
 }

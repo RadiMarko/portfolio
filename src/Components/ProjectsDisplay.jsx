@@ -15,16 +15,16 @@ export default function ProjectsDisplay(props) {
           rel="noopener noreferrer"
         >
           <h2>GEMIFY</h2>
-          <img
-            className="project-image"
-            src={projectGemify}
-            alt="Screenshot of a project's page."
-          ></img>
           <p className="project-description">
             {props.language === "english"
               ? "A simple dice game"
               : "Egy egyszerű dobókockás játék"}
           </p>
+          <img
+            className="project-image"
+            src={projectGemify}
+            alt="Screenshot of a project's page."
+          ></img>
         </a>
         <a
           className="project-card"
@@ -33,16 +33,16 @@ export default function ProjectsDisplay(props) {
           rel="noopener noreferrer"
         >
           <h2>MEMORISK</h2>
-          <img
-            className="project-image"
-            src={projectMemorisk}
-            alt="Screenshot of a project's page."
-          ></img>
           <p className="project-description">
             {props.language === "english"
               ? "A simple memory game"
               : "Egy egyszerű memóriajáték"}
           </p>
+          <img
+            className="project-image"
+            src={projectMemorisk}
+            alt="Screenshot of a project's page."
+          ></img>
         </a>
         <a
           className="project-card"
@@ -51,16 +51,16 @@ export default function ProjectsDisplay(props) {
           rel="noopener noreferrer"
         >
           <h2>RADITEXT</h2>
+          <p className="project-description">
+            {props.language === "english"
+              ? "App for counting text"
+              : "App szöveg számolásához"}
+          </p>
           <img
             className="project-image"
             src={projectRaditext}
             alt="Screenshot of a project's page."
           ></img>
-          <p className="project-description">
-            {props.language === "english"
-              ? "An app for counting text properties"
-              : "Egy app szövegek számolásához"}
-          </p>
         </a>
       </div>
       <button
