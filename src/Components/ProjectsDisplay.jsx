@@ -1,16 +1,88 @@
+import projectGemify from "/project_gemify.jpg";
+import projectMemorisk from "/project_memorisk.jpg";
+import projectRaditext from "/project_raditext.jpg";
+import ladderDark from "/ladder_dark.svg";
+import ladderBright from "/ladder_bright.svg";
+
 export default function ProjectsDisplay(props) {
   return (
-    <section
-      className={
-        props.projectsShown
-          ? "project-section project-section-shown"
-          : "project-section project-section-hidden"
-      }
-    >
-      <p>Test 1</p>
-      <p>Test 2</p>
-      <p>Test 3</p>
-      <button onClick={props.toggleProjectsShown}>CLIMB BACK</button>
+    <section className="project-section">
+      <div className="project-cards">
+        <a
+          className="project-card"
+          href="https://gemify.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2>GEMIFY</h2>
+          <img
+            className="project-image"
+            src={projectGemify}
+            alt="Screenshot of a project's page."
+          ></img>
+          <p className="project-description">
+            {props.language === "english"
+              ? "A simple dice game"
+              : "Egy egyszerű dobókockás játék"}
+          </p>
+        </a>
+        <a
+          className="project-card"
+          href="https://memorisk.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2>MEMORISK</h2>
+          <img
+            className="project-image"
+            src={projectMemorisk}
+            alt="Screenshot of a project's page."
+          ></img>
+          <p className="project-description">
+            {props.language === "english"
+              ? "A simple memory game"
+              : "Egy egyszerű memóriajáték"}
+          </p>
+        </a>
+        <a
+          className="project-card"
+          href="https://raditext.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2>RADITEXT</h2>
+          <img
+            className="project-image"
+            src={projectRaditext}
+            alt="Screenshot of a project's page."
+          ></img>
+          <p className="project-description">
+            {props.language === "english"
+              ? "An app for counting text properties"
+              : "Egy app szövegek számolásához"}
+          </p>
+        </a>
+      </div>
+      <button
+        className={props.darkMode ? "button-dark" : "button-bright"}
+        onClick={props.toggleProjectsShown}
+      >
+        <img
+          className="ladder-image"
+          src={props.darkMode ? ladderDark : ladderBright}
+          alt="A ladder's icon."
+        ></img>
+        <p
+          className={props.darkMode ? "button-text-dark" : "button-text-bright"}
+        >
+          {props.language === "english" ? "CLIMB BACK" : "MÁSSZ VISSZA"}
+        </p>
+        <img
+          className="ladder-image"
+          src={props.darkMode ? ladderDark : ladderBright}
+          alt="A ladder's icon."
+        ></img>
+      </button>
     </section>
   );
 }

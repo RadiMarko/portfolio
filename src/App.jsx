@@ -60,6 +60,8 @@ function App() {
       <ProjectsDisplay
         projectsShown={projectsShown}
         toggleProjectsShown={toggleProjectsShown}
+        darkMode={darkMode}
+        language={language}
       ></ProjectsDisplay>
     </>
   );

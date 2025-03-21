@@ -69,6 +69,11 @@ export default function Header(props) {
           </h2>
         </div>
         <div className="dropdown">
+          <h2 className="header-menu-item project-text">
+            {props.language === "english" ? "Illustrations" : "Illusztrációk"}
+          </h2>
+        </div>
+        <div className="dropdown">
           <h2 className="header-menu-item">
             {props.language === "english" ? "Contacts" : "Elérhetőségek"}
           </h2>
