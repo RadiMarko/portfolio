@@ -1,3 +1,5 @@
+import profilePicture from "/profile_picture.jpg";
+
 export default function Hero(props) {
   return (
     <section className="hero">
@@ -15,7 +17,11 @@ export default function Hero(props) {
             : "RADISAVLJEVIC MÁRKÓ"}
         </p>
       </a>
-      <div className="my-picture"></div>
+      <img
+        className="my-picture"
+        src={profilePicture}
+        alt="My not so great profile picture."
+      ></img>
       <p className="intro-text">
         {props.language === "english"
           ? `I'm a web developer and creator of vector graphics based in Hungary.
