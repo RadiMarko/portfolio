@@ -63,7 +63,7 @@ export default function Header(props) {
         <div className="dropdown">
           <h2
             className="header-menu-item project-text"
-            onClick={() => props.toggleProjectsShown()}
+            onClick={() => props.scrollToProjects()}
           >
             {props.language === "english" ? "Projects" : "Projektek"}
           </h2>
@@ -71,7 +71,7 @@ export default function Header(props) {
         <div className="dropdown">
           <h2
             className="header-menu-item project-text"
-            onClick={() => props.toggleIllustrationsShown()}
+            onClick={() => props.scrollToIllustrations()}
           >
             {props.language === "english" ? "Illustrations" : "Illusztrációk"}
           </h2>

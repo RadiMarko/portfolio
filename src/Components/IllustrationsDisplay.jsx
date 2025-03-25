@@ -45,7 +45,7 @@ export default function IllustrationsDisplay(props) {
       </div>
       <button
         className={props.darkMode ? "button-dark" : "button-bright"}
-        onClick={props.toggleIllustrationsShown}
+        onClick={props.scrollUp}
       >
         <img
           className="ladder-image"

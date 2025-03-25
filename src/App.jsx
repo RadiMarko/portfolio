@@ -8,45 +8,27 @@ import IllustrationsDisplay from "./Components/IllustrationsDisplay";
 function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [language, setLanguage] = useState("english");
-  const [projectsShown, setProjectsShown] = useState(false);
-  const [illustrationsShown, setIllustrationsShown] = useState(false);
 
   useEffect(() => {
     document.body.className = darkMode ? "dark-mode" : "bright-mode";
   }, [darkMode]);
 
-  useEffect(() => {
-    if (projectsShown) {
-      const projectSection =
-        document.getElementsByClassName("project-section")[0];
-      if (projectSection) {
-        projectSection.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, [projectsShown]);
+  function scrollToProjects() {
+    const projectSection =
+      document.getElementsByClassName("project-section")[0];
+    projectSection.scrollIntoView({ behavior: "smooth" });
+  }
 
-  useEffect(() => {
-    if (!projectsShown) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  }, [projectsShown]);
+  function scrollToIllustrations() {
+    const illustrationSection = document.getElementsByClassName(
+      "illustration-section"
+    )[0];
+    illustrationSection.scrollIntoView({ behavior: "smooth" });
+  }
 
-  useEffect(() => {
-    if (illustrationsShown) {
-      const illustrationSection = document.getElementsByClassName(
-        "illustration-section"
-      )[0];
-      if (illustrationSection) {
-        illustrationSection.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, [illustrationsShown]);
-
-  useEffect(() => {
-    if (!illustrationsShown) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  }, [illustrationsShown]);
+  function scrollUp() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 
   function toggleLanguage() {
     setLanguage((prevLanguage) => {
@@ -60,18 +42,6 @@ function App() {
     });
   }
 
-  function toggleProjectsShown() {
-    setProjectsShown((prevProjectsShown) => {
-      return !prevProjectsShown;
-    });
-  }
-
-  function toggleIllustrationsShown() {
-    setIllustrationsShown((prevIllustrationsShown) => {
-      return !prevIllustrationsShown;
-    });
-  }
-
   return (
     <>
       <Header
@@ -79,19 +49,17 @@ function App() {
         toggleLanguage={toggleLanguage}
         darkMode={darkMode}
         toggleLightMode={toggleLightMode}
-        toggleProjectsShown={toggleProjectsShown}
-        toggleIllustrationsShown={toggleIllustrationsShown}
+        scrollToProjects={scrollToProjects}
+        scrollToIllustrations={scrollToIllustrations}
       ></Header>
       <Hero language={language}></Hero>
       <ProjectsDisplay
-        projectsShown={projectsShown}
-        toggleProjectsShown={toggleProjectsShown}
+        scrollUp={scrollUp}
         darkMode={darkMode}
         language={language}
       ></ProjectsDisplay>
       <IllustrationsDisplay
-        illustrationsShown={illustrationsShown}
-        toggleIllustrationsShown={toggleIllustrationsShown}
+        scrollUp={scrollUp}
         darkMode={darkMode}
         language={language}
       ></IllustrationsDisplay>
