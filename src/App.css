@@ -426,19 +426,20 @@ a:active {
   }
 
   .project-section {
-    max-width: 20rem;
+    max-width: 21rem;
     display: flex;
     flex-direction: column;
     margin-bottom: 5rem;
   }
 
   .project-cards {
+    max-width: 20rem;
     display: flex;
     flex-direction: column;
   }
 
   .illustration-section {
-    max-width: 20rem;
+    max-width: 21rem;
     display: flex;
     flex-direction: column;
     margin-bottom: 10rem;
