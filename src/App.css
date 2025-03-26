@@ -271,6 +271,11 @@ a:active {
   user-select: none;
 }
 
+.project-image {
+  width: 22rem;
+  height: auto;
+}
+
 .project-card > h2 {
   letter-spacing: 0.8rem;
 }
@@ -328,6 +333,7 @@ a:active {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 10rem;
 }
 
 .illustrations {
