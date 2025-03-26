@@ -52,7 +52,7 @@ function App() {
         scrollToProjects={scrollToProjects}
         scrollToIllustrations={scrollToIllustrations}
       ></Header>
-      <Hero language={language}></Hero>
+      <Hero language={language} darkMode={darkMode}></Hero>
       <ProjectsDisplay
         scrollUp={scrollUp}
         darkMode={darkMode}
