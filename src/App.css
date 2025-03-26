@@ -1,5 +1,4 @@
 body {
-  display: flex;
   margin: 0 auto;
   transition: background-color 0.4s ease-in-out;
   font-family: Rubik, Arial, Helvetica, sans-serif;
@@ -163,6 +162,7 @@ body {
 
 .tech-text {
   cursor: pointer;
+  user-select: none;
 }
 
 .wifi-icon {
@@ -218,6 +218,7 @@ a:active {
 .greeting-text {
   margin-top: 2rem;
   font-size: 1.5rem;
+  user-select: none;
 }
 
 .name-text {
@@ -243,6 +244,7 @@ a:active {
   width: 75%;
   font-size: 1.5rem;
   text-align: center;
+  user-select: none;
 }
 
 /* PROJECT DISPLAY STYLING BELOW */
@@ -356,17 +358,17 @@ a:active {
 
 @media (max-width: 1365px) {
   body {
-    max-width: 20rem;
+    max-width: 21rem;
     margin: 0 auto;
   }
 
   .dark-mode {
-    max-width: 20rem;
+    max-width: 21rem;
     margin: 0 auto;
   }
 
   .bright-mode {
-    max-width: 20rem;
+    max-width: 21rem;
     margin: 0 auto;
   }
 
@@ -386,18 +388,18 @@ a:active {
     order: 2;
   }
 
-  .header-menu {
+  .header-menu-item {
     display: none;
   }
 
   .horizontal-line-dark {
     margin-top: 3rem;
-    max-width: 18rem;
+    max-width: 20rem;
   }
 
   .horizontal-line-bright {
     margin-top: 3rem;
-    max-width: 18rem;
+    max-width: 20rem;
   }
 
   .greeting-text {
@@ -407,7 +409,7 @@ a:active {
 
   .name-text {
     font-size: 1rem;
-    max-width: 19rem;
+    max-width: 20rem;
   }
 
   .name-text:hover {
@@ -416,14 +418,40 @@ a:active {
 
   .intro-text {
     font-size: 1rem;
-    max-width: 19rem;
+    max-width: 20rem;
+  }
+
+  .hero {
+    margin-bottom: 5rem;
   }
 
   .project-section {
-    display: none;
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+  }
+
+  .project-cards {
+    display: flex;
+    flex-direction: column;
   }
 
   .illustration-section {
-    display: none;
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10rem;
+  }
+
+  .illustrations {
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button-dark,
+  .button-bright {
+    display: none !important;
   }
 }
