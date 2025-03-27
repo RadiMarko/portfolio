@@ -65,28 +65,30 @@ function App() {
         darkMode={darkMode}
         language={language}
       ></IllustrationsDisplay>
-      <button
-        className={darkMode ? "query-button-dark" : "query-button-bright"}
-        onClick={scrollUp}
-      >
-        <img
-          className="ladder-image"
-          src={darkMode ? ladderDark : ladderBright}
-          alt="A ladder's icon."
-        ></img>
-        <p
-          className={
-            darkMode ? "query-button-text-dark" : "query-button-text-bright"
-          }
+      <div className="query-button-line">
+        <button
+          className={darkMode ? "query-button-dark" : "query-button-bright"}
+          onClick={scrollUp}
         >
-          {language === "english" ? "CLIMB BACK" : "MÁSSZ VISSZA"}
-        </p>
-        <img
-          className="ladder-image"
-          src={darkMode ? ladderDark : ladderBright}
-          alt="A ladder's icon."
-        ></img>
-      </button>
+          <img
+            className="ladder-image"
+            src={darkMode ? ladderDark : ladderBright}
+            alt="A ladder's icon."
+          ></img>
+          <p
+            className={
+              darkMode ? "query-button-text-dark" : "query-button-text-bright"
+            }
+          >
+            {language === "english" ? "CLIMB BACK" : "MÁSSZ VISSZA"}
+          </p>
+          <img
+            className="ladder-image"
+            src={darkMode ? ladderDark : ladderBright}
+            alt="A ladder's icon."
+          ></img>
+        </button>
+      </div>
     </div>
   );
 }

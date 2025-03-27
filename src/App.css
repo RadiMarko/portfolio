@@ -534,6 +534,11 @@ a:active {
     display: none !important;
   }
 
+  .query-button-line {
+    display: flex;
+    justify-content: center;
+  }
+
   .query-button-dark,
   .query-button-bright {
     display: flex;
