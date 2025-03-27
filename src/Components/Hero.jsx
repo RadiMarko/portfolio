@@ -57,7 +57,6 @@ export default function Hero(props) {
         <ContactLine
           image={email}
           contactName="r.marko1995@gmail.com"
-          href={"mailto:r.marko1995@gmail.com"}
         ></ContactLine>
         <ContactLine image={phone} contactName="+36 30 674 1072"></ContactLine>
         <ContactLine

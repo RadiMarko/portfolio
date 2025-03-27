@@ -91,7 +91,6 @@ export default function Header(props) {
               <ContactLine
                 image={email}
                 contactName="r.marko1995@gmail.com"
-                href={"mailto:r.marko1995@gmail.com"}
               ></ContactLine>
               <ContactLine
                 image={phone}

@@ -189,6 +189,11 @@ body {
 .contact-text {
   letter-spacing: normal;
   font-size: 1rem;
+  transition: all 0.4s;
+}
+
+.contact-text:hover {
+  color: blue;
 }
 
 /* HERO STYLING BELOW */
