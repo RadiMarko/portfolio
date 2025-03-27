@@ -16,7 +16,7 @@ export default function Hero(props) {
         {props.language === "english" ? "HELLO! MY NAME IS" : "HELLO! A NEVEM"}
       </p>
       <a
-        href="https://www.linkedin.com/in/marko-radisavljevic-553a18357"
+        href="https://www.linkedin.com/in/marko-radisavljevic-969b84241"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -67,7 +67,7 @@ export default function Hero(props) {
         <ContactLine
           image={linkedin}
           contactName="Marko Radisavljevic"
-          href={"https://www.linkedin.com/in/marko-radisavljevic-553a18357"}
+          href={"https://www.linkedin.com/in/marko-radisavljevic-969b84241"}
         ></ContactLine>
       </div>
     </section>

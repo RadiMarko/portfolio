@@ -105,7 +105,7 @@ export default function Header(props) {
                 image={linkedin}
                 contactName="Marko Radisavljevic"
                 href={
-                  "https://www.linkedin.com/in/marko-radisavljevic-553a18357"
+                  "https://www.linkedin.com/in/marko-radisavljevic-969b84241"
                 }
               ></ContactLine>
             </div>
