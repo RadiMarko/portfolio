@@ -252,6 +252,11 @@ a:active {
   display: none;
 }
 
+.query-contacts-dark,
+.query-contacts-bright {
+  display: none;
+}
+
 /* PROJECT DISPLAY STYLING BELOW */
 
 .project-section {
@@ -365,6 +370,15 @@ a:active {
   border: 0.1rem solid black;
 }
 
+.test {
+  display: none;
+}
+
+.query-button-dark,
+.query-button-bright {
+  display: none;
+}
+
 /* MEDIA QUERY FOR SMALLER SCREENS BELOW */
 
 @media (max-width: 1279px) {
@@ -465,6 +479,25 @@ a:active {
     color: white;
   }
 
+  .query-contacts-dark,
+  .query-contacts-bright {
+    margin-top: 5rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+  }
+
+  .query-contacts-dark {
+    display: block;
+    background-color: white;
+    color: black;
+  }
+
+  .query-contacts-bright {
+    display: block;
+    background-color: black;
+    color: white;
+  }
+
   .project-section {
     max-width: 21rem;
     display: flex;
@@ -494,5 +527,42 @@ a:active {
   .button-dark,
   .button-bright {
     display: none !important;
+  }
+
+  .query-button-dark,
+  .query-button-bright {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: black;
+    border: 0.1rem solid white;
+    cursor: pointer;
+    width: 18rem;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+    user-select: none;
+    justify-self: center;
+  }
+
+  .query-button-dark:active {
+    background-color: white;
+  }
+
+  .query-button-bright {
+    background-color: white;
+    border: 0.1rem solid black;
+    color: black;
+  }
+
+  .query-button-bright:active {
+    background-color: black;
+  }
+
+  .query-button-text-dark {
+    color: white;
+  }
+
+  .query-button-text-bright {
+    color: black;
   }
 }

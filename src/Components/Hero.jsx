@@ -1,8 +1,13 @@
 import TechLine from "./TechLine";
+import ContactLine from "./ContactLine";
 import profilePicture from "/profile_picture.jpg";
 import wifiLow from "/wifi_low.svg";
 import wifiMedium from "/wifi_medium.svg";
 import wifiHigh from "/wifi_high.svg";
+import email from "/email.svg";
+import phone from "/phone.svg";
+import github from "/github.svg";
+import linkedin from "/linkedin.svg";
 
 export default function Hero(props) {
   return (
@@ -33,9 +38,7 @@ export default function Hero(props) {
           : `Egy webfejlesztő és vektor grafikák készítője vagyok Magyarországról. Valósítsuk meg digitális ötleteidet együtt!`}
       </p>
       <div
-        className={
-          props.darkMode === true ? "query-skills-dark" : "query-skills-bright"
-        }
+        className={props.darkMode ? "query-skills-dark" : "query-skills-bright"}
       >
         <TechLine techName="ILLUSTRATOR" image={wifiHigh}></TechLine>
         <TechLine techName="PHOTOSHOP" image={wifiLow}></TechLine>
@@ -45,6 +48,28 @@ export default function Hero(props) {
         <TechLine techName="JAVASCRIPT" image={wifiMedium}></TechLine>
         <TechLine techName="REACT" image={wifiMedium}></TechLine>
         <TechLine techName="PYTHON" image={wifiLow}></TechLine>
+      </div>
+      <div
+        className={
+          props.darkMode ? "query-contacts-dark" : "query-contacts-bright"
+        }
+      >
+        <ContactLine
+          image={email}
+          contactName="r.marko1995@gmail.com"
+          href={"mailto:r.marko1995@gmail.com"}
+        ></ContactLine>
+        <ContactLine image={phone} contactName="+36 30 674 1072"></ContactLine>
+        <ContactLine
+          image={github}
+          contactName="github.com/RadiMarko"
+          href={"https://github.com/RadiMarko"}
+        ></ContactLine>
+        <ContactLine
+          image={linkedin}
+          contactName="Marko Radisavljevic"
+          href={"https://www.linkedin.com/in/marko-radisavljevic-553a18357"}
+        ></ContactLine>
       </div>
     </section>
   );

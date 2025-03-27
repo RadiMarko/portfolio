@@ -4,6 +4,8 @@ import Header from "./Components/Header";
 import Hero from "./Components/Hero";
 import ProjectsDisplay from "./Components/ProjectsDisplay";
 import IllustrationsDisplay from "./Components/IllustrationsDisplay";
+import ladderDark from "/ladder_dark.svg";
+import ladderBright from "/ladder_bright.svg";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -43,7 +45,7 @@ function App() {
   }
 
   return (
-    <>
+    <div className="app">
       <Header
         language={language}
         toggleLanguage={toggleLanguage}
@@ -63,7 +65,29 @@ function App() {
         darkMode={darkMode}
         language={language}
       ></IllustrationsDisplay>
-    </>
+      <button
+        className={darkMode ? "query-button-dark" : "query-button-bright"}
+        onClick={scrollUp}
+      >
+        <img
+          className="ladder-image"
+          src={darkMode ? ladderDark : ladderBright}
+          alt="A ladder's icon."
+        ></img>
+        <p
+          className={
+            darkMode ? "query-button-text-dark" : "query-button-text-bright"
+          }
+        >
+          {language === "english" ? "CLIMB BACK" : "MÁSSZ VISSZA"}
+        </p>
+        <img
+          className="ladder-image"
+          src={darkMode ? ladderDark : ladderBright}
+          alt="A ladder's icon."
+        ></img>
+      </button>
+    </div>
   );
 }
 
