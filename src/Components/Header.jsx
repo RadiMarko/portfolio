@@ -56,7 +56,7 @@ export default function Header(props) {
               <TechLine techName="CSS" image={wifiMedium}></TechLine>
               <TechLine techName="JAVASCRIPT" image={wifiMedium}></TechLine>
               <TechLine techName="REACT" image={wifiMedium}></TechLine>
-              <TechLine techName="PYTHON" image={wifiLow}></TechLine>
+              <TechLine techName="C#" image={wifiMedium}></TechLine>
             </div>
           </div>
         </div>
