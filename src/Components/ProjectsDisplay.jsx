@@ -2,85 +2,55 @@ import projectGemify from "/project_gemify.jpg";
 import projectMemorisk from "/project_memorisk.jpg";
 import projectRaditext from "/project_raditext.jpg";
 import projectEUFlagify from "/project_eu-flagify.jpg";
+import projectUnfinished from "/project_unfinished.jpg";
 import ladderDark from "/ladder_dark.svg";
 import ladderBright from "/ladder_bright.svg";
+import ProjectCard from "./ProjectCard.jsx";
 
 export default function ProjectsDisplay(props) {
   return (
     <section className="project-section">
       <div className="project-cards">
-        <a
-          className="project-card"
-          href="https://gemify.netlify.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>GEMIFY</h2>
-          <p className="project-description">
-            {props.language === "english"
-              ? "A simple dice game"
-              : "Egy egyszerű dobókockás játék"}
-          </p>
-          <img
-            className="project-image"
-            src={projectGemify}
-            alt="Screenshot of a project's page."
-          ></img>
-        </a>
-        <a
-          className="project-card"
-          href="https://memorisk.netlify.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>MEMORISK</h2>
-          <p className="project-description">
-            {props.language === "english"
-              ? "A simple memory game"
-              : "Egy egyszerű memóriajáték"}
-          </p>
-          <img
-            className="project-image"
-            src={projectMemorisk}
-            alt="Screenshot of a project's page."
-          ></img>
-        </a>
-        <a
-          className="project-card"
-          href="https://raditext.netlify.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>RADITEXT</h2>
-          <p className="project-description">
-            {props.language === "english"
-              ? "App for counting text"
-              : "App szöveg számolásához"}
-          </p>
-          <img
-            className="project-image"
-            src={projectRaditext}
-            alt="Screenshot of a project's page."
-          ></img>
-        </a>
-        <a
-          className="project-card"
-          href="https://eu-flagify.netlify.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>EU-FLAGIFY</h2>
-          <p className="project-description">
-            {props.language === "english"
-              ? "A flag guessing game"
-              : "Zászló kitalálós játék"}
-          </p>
-          <img
-            className="project-image"
-            src={projectEUFlagify}
-            alt="Screenshot of a project's page."
-          ></img>
-        </a>
+        <ProjectCard
+            url={"https://gemify.netlify.app/"}
+            projectTitle={"GEMIFY"}
+            language={props.language}
+            engDescription={"A simple dice game"}
+            hunDescription={"Egy egyszerű dobókockás játék"}
+            imagePath={projectGemify}
+        ></ProjectCard>
+        <ProjectCard
+            url={"https://memorisk.netlify.app/"}
+            projectTitle={"MEMORISK"}
+            language={props.language}
+            engDescription={"A simple memory game"}
+            hunDescription={"Egy egyszerű memóriajáték"}
+            imagePath={projectMemorisk}
+        ></ProjectCard>
+        <ProjectCard
+            url={"https://raditext.netlify.app/"}
+            projectTitle={"RADITEXT"}
+            language={props.language}
+            engDescription={"App for counting text"}
+            hunDescription={"App szöveg számolásához"}
+            imagePath={projectRaditext}
+        ></ProjectCard>
+        <ProjectCard
+            url={"https://eu-flagify.netlify.app/"}
+            projectTitle={"EU-FLAGIFY"}
+            language={props.language}
+            engDescription={"A flag guessing game"}
+            hunDescription={"Zászló kitalálós játék"}
+            imagePath={projectEUFlagify}
+        ></ProjectCard>
+          <ProjectCard
+              url={""}
+              projectTitle={"???"}
+              language={props.language}
+              engDescription={"Under development"}
+              hunDescription={"Fejlesztés alatt"}
+              imagePath={projectUnfinished}
+          ></ProjectCard>  
       </div>
       <button
         className={props.darkMode ? "button-dark" : "button-bright"}
