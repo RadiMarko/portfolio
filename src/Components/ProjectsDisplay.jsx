@@ -1,6 +1,7 @@
 import projectGemify from "/project_gemify.jpg";
 import projectMemorisk from "/project_memorisk.jpg";
 import projectRaditext from "/project_raditext.jpg";
+import projectEUFlagify from "/project_eu-flagify.jpg";
 import ladderDark from "/ladder_dark.svg";
 import ladderBright from "/ladder_bright.svg";
 
@@ -59,6 +60,24 @@ export default function ProjectsDisplay(props) {
           <img
             className="project-image"
             src={projectRaditext}
+            alt="Screenshot of a project's page."
+          ></img>
+        </a>
+        <a
+          className="project-card"
+          href="https://eu-flagify.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2>EU-FLAGIFY</h2>
+          <p className="project-description">
+            {props.language === "english"
+              ? "A flag guessing game"
+              : "Zászló kitalálós játék"}
+          </p>
+          <img
+            className="project-image"
+            src={projectEUFlagify}
             alt="Screenshot of a project's page."
           ></img>
         </a>

@@ -272,8 +272,9 @@ a:active {
 }
 
 .project-cards {
-  display: flex;
-  gap: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5rem;
   justify-content: center;
 }
 
