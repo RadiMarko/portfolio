@@ -518,16 +518,7 @@ a:active {
   }
 
   .illustration-section {
-    max-width: 21rem;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5rem;
-  }
-
-  .illustrations {
-    max-width: 20rem;
-    display: flex;
-    flex-direction: column;
+    display: none;
   }
 
   .button-dark,
