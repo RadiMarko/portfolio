@@ -44,7 +44,6 @@ export default function ProjectsDisplay(props) {
             imagePath={projectEUFlagify}
         ></ProjectCard>
           <ProjectCard
-              url={""}
               projectTitle={"???"}
               language={props.language}
               engDescription={"Under development"}

@@ -3,45 +3,33 @@ import invitationTwo from "/invitation_2.jpg";
 import gamecenter from "/gamecenter.jpg";
 import ladderDark from "/ladder_dark.svg";
 import ladderBright from "/ladder_bright.svg";
+import IllustrationCard from "./IllustrationCard.jsx";
 
 export default function IllustrationsDisplay(props) {
   return (
     <section className="illustration-section">
       <div className="illustrations">
-        <div className="illustration-card">
-          <h2>
-            {props.language === "english"
-              ? "WEDDING INVITATION"
-              : "ESKÜVŐI MEGHÍVÓ"}
-          </h2>
-          <img
-            className="illustration"
-            src={invitationOne}
-            alt="A picture of a wedding invitation."
-          ></img>
-        </div>
-        <div className="illustration-card">
-          <h2>
-            {props.language === "english"
-              ? "WEDDING INVITATION"
-              : "ESKÜVŐI MEGHÍVÓ"}
-          </h2>
-          <img
-            className="illustration"
-            src={invitationTwo}
-            alt="A picture of a wedding invitation."
-          ></img>
-        </div>
-        <div className="illustration-card">
-          <h2>
-            {props.language === "english" ? "BUSINESS LOGO" : "ÜZLET LOGÓJA"}
-          </h2>
-          <img
-            className="illustration"
-            src={gamecenter}
-            alt="The logo of a business."
-          ></img>
-        </div>
+        <IllustrationCard 
+            language={props.language}
+            engTitle={"WEDDING INVITATION"}
+            hunTitle={"ESKÜVŐI MEGHÍVÓ"}
+            imagePath={invitationOne}
+            imageAlt={"An illustration of a wedding invitation"}
+        ></IllustrationCard>
+        <IllustrationCard
+            language={props.language}
+            engTitle={"WEDDING INVITATION"}
+            hunTitle={"ESKÜVŐI MEGHÍVÓ"}
+            imagePath={invitationTwo}
+            imageAlt={"An illustration of a wedding invitation"}
+        ></IllustrationCard>
+        <IllustrationCard
+            language={props.language}
+            engTitle={"BUSINESS LOGO"}
+            hunTitle={"ÜZLET LOGÓJA"}
+            imagePath={gamecenter}
+            imageAlt={"The logo of a business"}
+        ></IllustrationCard>
       </div>
       <button
         className={props.darkMode ? "button-dark" : "button-bright"}
