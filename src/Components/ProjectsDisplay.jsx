@@ -2,6 +2,7 @@ import projectGemify from "/project_gemify.jpg";
 import projectMemorisk from "/project_memorisk.jpg";
 import projectRaditext from "/project_raditext.jpg";
 import projectEUFlagify from "/project_eu-flagify.jpg";
+import projectOoxxoo from "/project_ooxxoo.jpg";
 import projectUnfinished from "/project_unfinished.jpg";
 import ladderDark from "/ladder_dark.svg";
 import ladderBright from "/ladder_bright.svg";
@@ -43,6 +44,14 @@ export default function ProjectsDisplay(props) {
             hunDescription={"Zászló kitalálós játék"}
             imagePath={projectEUFlagify}
         ></ProjectCard>
+          <ProjectCard
+              url={"https://ooxxoo.netlify.app/"}
+              projectTitle={"OOXXOO"}
+              language={props.language}
+              engDescription={"A Tic-Tac-Toe game"}
+              hunDescription={"Egy Tic-Tac-Toe játék"}
+              imagePath={projectOoxxoo}
+          ></ProjectCard>
           <ProjectCard
               projectTitle={"???"}
               language={props.language}
