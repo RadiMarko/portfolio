@@ -3,6 +3,7 @@ import projectMemorisk from "/project_memorisk.jpg";
 import projectRaditext from "/project_raditext.jpg";
 import projectEUFlagify from "/project_eu-flagify.jpg";
 import projectOoxxoo from "/project_ooxxoo.jpg";
+import projectCarTrivia from "/project_car-trivia.jpg";
 import projectUnfinished from "/project_unfinished.jpg";
 import ladderDark from "/ladder_dark.svg";
 import ladderBright from "/ladder_bright.svg";
@@ -44,21 +45,29 @@ export default function ProjectsDisplay(props) {
             hunDescription={"Zászló kitalálós játék"}
             imagePath={projectEUFlagify}
         ></ProjectCard>
-          <ProjectCard
+        <ProjectCard
               url={"https://ooxxoo.netlify.app/"}
               projectTitle={"OOXXOO"}
               language={props.language}
               engDescription={"A Tic-Tac-Toe game"}
               hunDescription={"Egy Tic-Tac-Toe játék"}
               imagePath={projectOoxxoo}
-          ></ProjectCard>
-          <ProjectCard
+        ></ProjectCard>
+        <ProjectCard
+            url={"https://car-trivia.netlify.app/"}
+            projectTitle={"CAR-TRIVIA"}
+            language={props.language}
+            engDescription={"A car logo quiz"}
+            hunDescription={"Auto logós quiz"}
+            imagePath={projectCarTrivia}
+        ></ProjectCard>
+        <ProjectCard
               projectTitle={"???"}
               language={props.language}
               engDescription={"Under development"}
               hunDescription={"Fejlesztés alatt"}
               imagePath={projectUnfinished}
-          ></ProjectCard>  
+        ></ProjectCard>  
       </div>
       <button
         className={props.darkMode ? "button-dark" : "button-bright"}
